@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "@nuxtjs/eslint-config-typescript",
+        "plugin:vue/vue3-essential"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "parser": "@typescript-eslint/parser",
+        "project": "./tsconfig.json", // Ensure this path points to your tsconfig.json
+        "extraFileExtensions": [".vue"]
+    },
+    "plugins": [
+        "vue",
+        "@typescript-eslint" // Include TypeScript plugin
+    ],
+    "rules": {
+        "vue/multi-word-component-names": ["error", {
+            "ignores": [
+                "./pages/*"
+            ]
+        }]
+    }
+}
