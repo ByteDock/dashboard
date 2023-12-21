@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     'nuxt-icon',
     '@nuxtjs/device',
-    '@formkit/auto-animate',
+    '@formkit/auto-animate/nuxt',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts'
   ],
