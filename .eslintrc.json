@@ -21,7 +21,8 @@
     "rules": {
         "vue/multi-word-component-names": ["error", {
             "ignores": [
-                "./pages/*"
+                "./pages/*",
+                "./layouts/*"
             ]
         }]
     }
