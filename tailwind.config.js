@@ -5,9 +5,11 @@ export const content = [
   './pages/**/*.vue',
   './plugins/**/*.{js,ts}',
   './app.vue',
-  './error.vue'
+  './error.vue',
+  './node_modules/flowbite/**/*.{js,ts}'
 ]
 export const theme = {
   extend: {}
 }
-export const plugins = [require('flowbite')]
+export const plugins = [require('flowbite/plugin')]
+export const darkMode = 'class'

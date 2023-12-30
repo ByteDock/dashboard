@@ -103,7 +103,7 @@
 </template>
 
 <script>
-export default {
-  name: 'IndexPage'
-}
+definePageMeta({
+  name: 'index'
+})
 </script>

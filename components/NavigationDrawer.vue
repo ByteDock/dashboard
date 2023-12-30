@@ -1,46 +1,12 @@
-<script lang="ts" setup>
-import { ref } from 'vue'
-
-interface DropdownItem {
-  name: string;
-  to?: string;
-}
-
-interface Item extends DropdownItem {
-  icon: string;
-  dropdown?: boolean;
-  items?: DropdownItem[];
-}
-
-interface Props {
-  items: Item[];
-}
-
-const props = defineProps<Props>()
-
-const dropdownStates = ref<{ [key: string]: boolean }>({})
-
-props.items.forEach((item) => { dropdownStates.value[item.name] = false })
-
-const toggleDropdown = (itemName: string) => {
-  dropdownStates.value[itemName] = !dropdownStates.value[itemName]
-}
-
-const arrowIcons = {
-  down: 'material-symbols:keyboard-arrow-down-rounded',
-  up: 'material-symbols:keyboard-arrow-up-rounded'
-}
-
-const getIcon = (itemName: string) => {
-  return dropdownStates.value[itemName] ? arrowIcons.up : arrowIcons.down
-}
-</script>
-
 <template>
-  <aside id="navigation-drawer" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+  <aside
+    id="navigation-drawer"
+    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+    aria-label="Sidebar"
+  >
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <a class="flex items-center ps-2.5 mb-5">
-        <img src="../assets/images/logo_circle.svg" class="h-6 me-3 sm:h-8" alt="ByteDock Logo">
+        <img src="../assets/images/logo_circle.svg" class="h-8 me-2 sm:h-8" alt="ByteDock Logo">
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ByteDock</span>
       </a>
       <ul class="space-y-2 font-medium">
@@ -58,7 +24,7 @@ const getIcon = (itemName: string) => {
               <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{ item.name }}</span>
               <Icon :name="getIcon(item.name)" class="w-7 h-7" aria-hidden="true" />
             </button>
-            <ul :id="`dropdown-${item.name}`" class="hidden py-2 space-y-2">
+            <ul :id="`dropdown-${item.name}`" class="hidden transition-transform py-2 space-y-2">
               <li
                 v-for="_item in item.items"
                 :key="_item.name"
@@ -74,3 +40,54 @@ const getIcon = (itemName: string) => {
     </div>
   </aside>
 </template>
+
+<script lang="ts">
+import { Vue, Prop, Component, toNative } from 'vue-facing-decorator'
+
+interface DropdownItem {
+  name: string;
+  to?: string;
+}
+
+interface Item extends DropdownItem {
+  icon: string;
+  dropdown?: boolean;
+  items?: DropdownItem[];
+}
+
+@Component
+class NavigationDrawer extends Vue {
+  @Prop({ required: true, type: Array }) readonly items!: Item[]
+
+  dropdownStates: {[key: string]: boolean} = {}
+
+  arrowIcons = {
+    down: 'material-symbols:keyboard-arrow-down-rounded',
+    up: 'material-symbols:keyboard-arrow-up-rounded'
+  }
+
+  setup () {
+    this.initializeDropdownStates()
+  }
+
+  mounted () {
+  }
+
+  initializeDropdownStates () {
+    this.items.forEach((item) => {
+      this.dropdownStates[item.name] = false
+    })
+  }
+
+  toggleDropdown (itemName: string) {
+    this.dropdownStates[itemName] = !this.dropdownStates[itemName]
+  }
+
+  getIcon (itemName: string) {
+    // alert([itemName, this.items, this.dropdownStates, this.dropdownStates[itemName]])
+    return this.dropdownStates[itemName] ? this.arrowIcons.up : this.arrowIcons.down
+  }
+}
+
+export default toNative(NavigationDrawer)
+</script>

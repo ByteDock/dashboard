@@ -36,10 +36,19 @@
   "author": "Mads Lundgren <contact@crabzzai.me>",
   "license": "MIT",
   "dependencies": {
+    "@nuxt/types": "^2.17.2",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "autoprefixer": "^10.4.16",
     "flowbite": "^2.2.1",
+    "nuxt-property-decorator": "^2.9.1",
+    "nuxt-typed-vuex": "^0.3.1",
+    "nuxt3-class-component": "^1.1.2",
     "postcss": "^8.4.32",
-    "vscode-languageclient": "^9.0.1"
+    "tslib": "^2.6.2",
+    "typed-vuex": "^0.3.1",
+    "vscode-languageclient": "^9.0.1",
+    "vue-facing-decorator": "^3.0.4",
+    "vuex": "^4.1.0",
+    "vuex-module-decorators": "^2.0.0"
   }
 }
