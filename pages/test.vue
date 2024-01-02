@@ -1,7 +1,7 @@
 <template>
-  <div class="p-4 sm:ml-64">
+  <div class="p-4 sm:ml-64 min-h-screen">
     <!-- Modal toggle -->
-    <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+    <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-secondary-content bg-secondary hover:bg-secondary-light focus:ring-4 focus:outline-none focus:bg-secondary-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-primary-content dark:bg-primary dark:hover:bg-primary-light dark:focus:bg-primary-dark" type="button">
       Toggle modal
     </button>
 

@@ -46,6 +46,7 @@
     "postcss": "^8.4.32",
     "tslib": "^2.6.2",
     "typed-vuex": "^0.3.1",
+    "vite-svg-loader": "^5.1.0",
     "vscode-languageclient": "^9.0.1",
     "vue-facing-decorator": "^3.0.4",
     "vuex": "^4.1.0",

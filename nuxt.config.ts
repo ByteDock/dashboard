@@ -20,8 +20,7 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
-    'nuxt3-class-component',
-    '@nuxtjs/color-mode'
+    'nuxt3-class-component'
   ],
   colorMode: {
     classSuffix: ''

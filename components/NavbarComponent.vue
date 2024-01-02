@@ -12,17 +12,3 @@
     </button>
   </div>
 </template>
-
-<script lang="ts">
-import { initDrawers } from 'flowbite'
-import { Vue, Component, toNative } from 'vue-facing-decorator'
-
-@Component
-class NavigationComponent extends Vue {
-  mounted () {
-    initDrawers()
-  }
-}
-
-export default toNative(NavigationComponent)
-</script>
