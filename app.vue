@@ -8,7 +8,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtLayout class="bg-light-background dark:bg-dark-background">
-    <NuxtPage />
-  </NuxtLayout>
+  <div>
+    <NuxtLoadingIndicator />
+    <NuxtLayout class="bg-light-background dark:bg-dark-background">
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>

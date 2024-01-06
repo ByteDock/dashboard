@@ -23,7 +23,14 @@ export default defineNuxtConfig({
     'nuxt3-class-component'
   ],
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
+    preference: 'light',
+    fallback: 'light',
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    storageKey: 'nuxt-color-mode'
   },
   plugins: []
 })
