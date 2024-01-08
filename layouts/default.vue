@@ -8,65 +8,65 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'DefaultLayout',
-  data () {
-    return {
-      items: [
-        {
-          name: 'Dashboard',
-          icon: 'material-symbols:space-dashboard',
-          to: '/'
-        },
-        {
-          name: 'Infrastructure',
-          icon: 'ph:computer-tower-fill',
-          dropdown: true,
-          items: [
-            {
-              name: 'Daemons',
-              to: '/infrastructure/daemons'
-            },
-            {
-              name: 'Services'
-            },
-            {
-              name: 'Projects'
-            },
-            {
-              name: 'Networks'
-            }
-          ]
-        },
-        {
-          name: 'CRUD',
-          icon: 'material-symbols:unknown-document',
-          dropdown: true,
-          items: [
-            {
-              name: 'Roles'
-            },
-            {
-              name: 'Users'
-            }
-          ]
-        },
-        {
-          name: 'Security',
-          icon: 'material-symbols:visibility-lock',
-          dropdown: true,
-          items: [
-            {
-              name: 'Audit Logs'
-            },
-            {
-              name: 'Settings'
-            }
-          ]
-        }
-      ]
-    }
+<script setup lang="ts">
+const items = [
+  {
+    name: 'Dashboard',
+    icon: 'material-symbols:space-dashboard',
+    to: '/'
+  },
+  {
+    name: 'Infrastructure',
+    icon: 'ph:computer-tower-fill',
+    dropdown: true,
+    items: [
+      {
+        name: 'Daemons',
+        to: '/infrastructure/daemons'
+      },
+      {
+        name: 'Services',
+        to: '/infrastructure/services'
+      },
+      {
+        name: 'Projects',
+        to: '/infrastructure/projects'
+      },
+      {
+        name: 'Networks',
+        to: '/infrastructure/networks'
+      }
+    ]
+  },
+  {
+    name: 'CRUD',
+    icon: 'material-symbols:unknown-document',
+    dropdown: true,
+    items: [
+      {
+        name: 'Roles'
+      },
+      {
+        name: 'Users'
+      }
+    ]
+  },
+  {
+    name: 'Security',
+    icon: 'material-symbols:visibility-lock',
+    dropdown: true,
+    items: [
+      {
+        name: 'Audit Logs'
+      },
+      {
+        name: 'Settings'
+      }
+    ]
   }
-}
+]
+
+definePageMeta({
+  name: 'DefaultLayout'
+})
 </script>
