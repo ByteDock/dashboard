@@ -3,7 +3,15 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
-  components: true,
+  components: {
+    dirs: [
+      {
+        path: '~/components/svgs',
+        global: true
+      },
+      '~/components'
+    ]
+  },
   postcss: {
     plugins: {
       tailwindcss: {

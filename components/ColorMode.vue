@@ -14,7 +14,7 @@ const icon = ref('material-symbols:clear-day-rounded')
 const fnc = (newValue: string) => {
   icon.value = newValue === 'light'
     ? 'material-symbols:clear-day-rounded'
-    : 'material-symbols:dark-mode'
+    : 'material-symbols-light:nights-stay-rounded'
 }
 
 watch(() => colorMode.value, fnc)

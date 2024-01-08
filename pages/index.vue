@@ -3,14 +3,12 @@
     <BannerComponent
       title="Mission Control"
       text="Your dashboard of destiny. Flip switches, press buttons, and watch the magic happen!"
-      :svg="SvgsServerStatus"
+      svg="ServerStatus"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { SvgsServerStatus } from '#build/components'
-
 definePageMeta({
   name: 'index'
 })
