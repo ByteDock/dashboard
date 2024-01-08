@@ -25,7 +25,8 @@ export default {
           dropdown: true,
           items: [
             {
-              name: 'Daemons'
+              name: 'Daemons',
+              to: '/infrastructure/daemons'
             },
             {
               name: 'Services'

@@ -19,11 +19,6 @@
         "@typescript-eslint" // Include TypeScript plugin
     ],
     "rules": {
-        "vue/multi-word-component-names": ["error", {
-            "ignores": [
-                "./pages/*",
-                "./layouts/*"
-            ]
-        }]
+        "vue/multi-word-component-names": 0
     }
 }

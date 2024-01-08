@@ -29,7 +29,7 @@
                 v-for="_item in item.items"
                 :key="_item.name"
               >
-                <NuxtLink :to="item.to || '#'" class="flex items-center w-full p-2 text-secondary-content transition duration-75 rounded-lg pl-11 group hover:bg-secondary-light dark:text-primary-content dark:hover:bg-primary-light">
+                <NuxtLink :to="_item.to || '#'" class="flex items-center w-full p-2 text-secondary-content transition duration-75 rounded-lg pl-11 group hover:bg-secondary-light dark:text-primary-content dark:hover:bg-primary-light">
                   {{ _item.name }}
                 </NuxtLink>
               </li>
