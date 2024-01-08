@@ -6,7 +6,7 @@
   >
     <div class="h-full px-3 py-4 overflow-y-auto bg-light-foreground dark:bg-dark-foreground">
       <a class="flex items-center ps-2.5 mb-5">
-        <SvgsLogoCircle name="logo_circle" class="h-9 me-2 w-9 sm:w-9 sm:h-9 fill-secondary-content dark:fill-primary-content" />
+        <LogoCircle name="logo_circle" class="h-9 me-2 w-9 sm:w-9 sm:h-9 fill-secondary-content dark:fill-primary-content" />
         <span class="self-center text-xl font-semibold whitespace-nowrap text-secondary-content dark:text-primary-content">ByteDock</span>
       </a>
       <ul class="space-y-2 font-medium">
