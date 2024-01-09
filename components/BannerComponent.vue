@@ -10,22 +10,16 @@
         </p>
         <ByteButton
           v-if="props.btn"
-          class="hidden md:block mt-2 px-5 py-2.5"
-          type="button"
+          class="hidden md:block"
           :data="props.btn"
-        >
-          {{ props.btn.text }}
-        </ByteButton>
+        />
       </div>
-      <component :is="props.svg" v-if="props.svg" class="w-11/12 md:w-52 h-fit m-auto md:mr-2 md:mb-2 p-2" />
+      <component :is="props.svg" v-if="props.svg" class="w-11/12 md:w-52 h-fit m-auto md:mr-1 p-2" />
       <ByteButton
         v-if="props.btn"
-        class="block md:hidden w-11/12 m-auto mb-2 mt-2 px-5 py-2.5"
-        type="button"
+        class="block md:hidden w-11/12 m-auto mb-2"
         :data="props.btn"
-      >
-        {{ props.btn.text }}
-      </ByteButton>
+      />
     </div>
   </div>
 </template>

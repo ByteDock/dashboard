@@ -44,10 +44,12 @@ const items = [
     dropdown: true,
     items: [
       {
-        name: 'Roles'
+        name: 'Roles',
+        to: '/crud/roles'
       },
       {
-        name: 'Users'
+        name: 'Users',
+        to: '/crud/users'
       }
     ]
   },
@@ -57,10 +59,12 @@ const items = [
     dropdown: true,
     items: [
       {
-        name: 'Audit Logs'
+        name: 'Audit Logs',
+        to: '/security/audit-logs'
       },
       {
-        name: 'Settings'
+        name: 'Settings',
+        to: '/security/settings'
       }
     ]
   }
